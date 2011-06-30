@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+my $sum = 0;
+while(<>) {
+    chomp;
+    $sum += $_;
+}
+print $sum."\n";

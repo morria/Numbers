@@ -1,0 +1,11 @@
+#!/usr/bin/perl
+
+my %map;
+while(<>) {
+    chomp;
+    ++$map{$_};
+}
+
+for my $key (sort {$a <=> $b} keys %map) {
+    print join("\t",$key,$map{$key})."\n";
+}

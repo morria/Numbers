@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+my $max = -99999999999999999999;
+while(<>) {
+    chomp;
+    $max = $_ if($_ > $max);
+}
+print $max."\n";

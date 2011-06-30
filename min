@@ -1,0 +1,8 @@
+#!/usr/bin/perl
+
+my $min = 99999999999999999999;
+while(<>) {
+    chomp;
+    $min = $_ if($_ < $min);
+}
+print $min."\n";

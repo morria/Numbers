@@ -1,0 +1,6 @@
+#!/usr/bin/perl
+my $i = 0;
+my $rate = shift(@ARGV);
+while(<>) {
+    (++$i%$rate == 0) && print;
+}
