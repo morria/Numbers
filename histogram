@@ -1,9 +1,17 @@
 #!/usr/bin/perl
 
+use POSIX;
+
+my $bucketSize = shift @ARGV;
+
 my %map;
 while(<>) {
     chomp;
-    ++$map{$_};
+    my $value = $_;
+    if($bucketSize) {
+        $value = ceil($value/$bucketSize) * $bucketSize;
+    }
+    ++$map{$value};
 }
 
 for my $key (sort {$a <=> $b} keys %map) {
