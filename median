@@ -1,0 +1,11 @@
+#!/usr/bin/perl
+use POSIX;
+my @values;
+while(<>) {
+    chomp;
+    push(@values, $_);
+}
+sort { $a <=> $b } (@values);
+my $size = $#values;
+my $median = $values[floor($#values/2)];
+print $median."\n";

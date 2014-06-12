@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+my $sum = 0;
+my $count = 0;
+while(<>) {
+    chomp;
+    $sum += $_;
+    ++$count;
+}
+my $mean = ($sum/$count);
+print $mean."\n";
